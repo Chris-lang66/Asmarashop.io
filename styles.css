@@ -588,10 +588,11 @@ h2 {
 }
 
 .contact-container {
-    color: #232121;
+    color: #590b0b;
     font: 18px Roboto;
     font-size: 100px;
-    background: #a3b5a0;
+    padding: 50px 0;
+    background: radial-gradient(#fff, #ffd6d6);
     margin: 0px 170px;
     padding: 120px;
     border-radius: 30px;
@@ -604,14 +605,200 @@ h2 {
 }
 
 .font {
+    color: #590b0b;
     font-size: 100px;
-    margin: 40px 37%;
-    background: #c6d4c4;
+    margin: 40px 38%;
+    padding: 30px 0;
+    /* background: radial-gradient(#fff, #ffd6d6); */
     text-decoration-line: underline; 
     border-radius: 10px;
     text-align: right;
 }
 
+/* instagram link icon */
+
+/* .instagram.icon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.instagram-icon {
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+} */
+
+.instagram-icon svg {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+}
+
+
+/* Stile generale per la sezione About */
+#about {
+    /* background: linear-gradient(135deg, #fce4ec, #f8bbd0); Gradiente rosa */
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.2); /* Cerchio sfumato decorativo */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#about::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.3); /* Altro elemento decorativo */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#about .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about h2 {
+    font-size: 2.8em;
+    color: #da5083; /* Rosa scuro per i titoli */
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e68eae; /* Sotto-linea rosa scuro */
+    transition: color 0.3s ease;
+}
+
+#about h2:hover {
+    color: #d5a2b8; /* Rosa più scuro al passaggio del mouse */
+}
+
+#about p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: justify;
+    background: radial-gradient(#fff, #ffd6d6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+#about strong {
+    color: #cf497a;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#about strong:hover {
+    color: #f85a9e;
+}
+
+/* Stile per dispositivi mobili */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2.2em;
+    }
+
+    #about p {
+        font-size: 1.1em;
+    }
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Inizia da invisibile */
+        transform: translateY(-20px); /* Si sposta verso l'alto */
+    }
+    to {
+        opacity: 1; /* Raggiunge la piena visibilità */
+        transform: translateY(0); /* Torna alla posizione originale */
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Inizialmente invisibile */
+        transform: translateY(20px); /* Parte dal basso */
+    }
+    100% {
+        opacity: 1; /* Diventa visibile */
+        transform: translateY(0); /* Torna alla posizione originale */
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0; /* Inizia da invisibile */
+        transform: scale(0.9); /* Inizia un po' più piccolo */
+    }
+    to {
+        opacity: 1; /* Raggiunge la piena visibilità */
+        transform: scale(1); /* Torna alla dimensione originale */
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); /* Posizione originale */
+    }
+    25% {
+        transform: translateX(-5px); /* Si sposta a sinistra */
+    }
+    50% {
+        transform: translateX(5px); /* Si sposta a destra */
+    }
+    75% {
+        transform: translateX(-5px); /* Si sposta a sinistra */
+    }
+}
+
+/* Applicazione delle animazioni */
+#about h2 {
+    animation: fadeIn 1s ease forwards, zoomIn 0.5s ease forwards; /* Animazioni di entrata per i titoli */
+}
+
+#about p {
+    animation: slideIn 0.5s ease forwards, shake 0.5s ease forwards; /* Animazione di entrata e oscillazione per i paragrafi */
+}
+
+/* Aggiunta di un'animazione al passaggio del mouse sui paragrafi */
+#about p:hover {
+    animation: shake 0.5s ease; /* Oscillazione al passaggio del mouse */
+}
 
 
 
